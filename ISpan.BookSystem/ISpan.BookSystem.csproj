@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18DA9EFF-2636-4488-8D23-6BD1AAA98670}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ISpan.BookSystem</RootNamespace>
+    <AssemblyName>ISpan.BookSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ISpan.Utility">
+      <HintPath>..\..\..\..\source\repos\1110\ISpan.Utility\bin\Debug\ISpan.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookListForm.Designer.cs">
+      <DependentUpon>BookListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowBookForm.Designer.cs">
+      <DependentUpon>BorrowBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowRecordForm.Designer.cs">
+      <DependentUpon>BorrowRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateBookListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBookListForm.Designer.cs">
+      <DependentUpon>CreateBookListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateBorrorRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBorrorRecordForm.Designer.cs">
+      <DependentUpon>CreateBorrorRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateReadUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateReadUserForm.Designer.cs">
+      <DependentUpon>CreateReadUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditBookListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBookListForm.Designer.cs">
+      <DependentUpon>EditBookListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditBorrorRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBorrorRecordForm.Designer.cs">
+      <DependentUpon>EditBorrorRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditReadUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditReadUserForm.Designer.cs">
+      <DependentUpon>EditReadUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ValidationHelper.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BookAuthorVM.cs" />
+    <Compile Include="ViewModels\BookCategoriesVM.cs" />
+    <Compile Include="ViewModels\BookIndexVM.cs" />
+    <Compile Include="ViewModels\LoginVM.cs" />
+    <Compile Include="ViewModels\Services\BookService.cs" />
+    <Compile Include="ViewModels\Services\BorrowService.cs" />
+    <Compile Include="ViewModels\Services\ReaderUserService.cs" />
+    <Compile Include="ViewModels\RentBookIndexVM.cs" />
+    <Compile Include="ViewModels\UserIndexVM.cs" />
+    <EmbeddedResource Include="BorrowBookForm.resx">
+      <DependentUpon>BorrowBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBorrorRecordForm.resx">
+      <DependentUpon>CreateBorrorRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditBorrorRecordForm.resx">
+      <DependentUpon>EditBorrorRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookListForm.resx">
+      <DependentUpon>BookListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowRecordForm.resx">
+      <DependentUpon>BorrowRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBookListForm.resx">
+      <DependentUpon>CreateBookListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateReadUserForm.resx">
+      <DependentUpon>CreateReadUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditBookListForm.resx">
+      <DependentUpon>EditBookListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditReadUserForm.resx">
+      <DependentUpon>EditReadUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.BookAuthorVM.datasource" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.BookCategoriesVM.datasource" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.BookIndexVM.datasource" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.BorrowBookIndexVM.datasource" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.ManageUserIndexVM.datasource" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.ReaderUserIndexVM.datasource" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.Services.RentBookIndexVM.datasource" />
+    <None Include="Properties\DataSources\ISpan.BookSystem.ViewModels.UserIndexVM.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookbackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booklistform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edituser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adduser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\returnbook_editborrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\createborrowbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowbooklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rentrecordbooklist.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

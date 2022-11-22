@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISpan.BookSystem", "ISpan.BookSystem\ISpan.BookSystem.csproj", "{18DA9EFF-2636-4488-8D23-6BD1AAA98670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18DA9EFF-2636-4488-8D23-6BD1AAA98670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DA9EFF-2636-4488-8D23-6BD1AAA98670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DA9EFF-2636-4488-8D23-6BD1AAA98670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DA9EFF-2636-4488-8D23-6BD1AAA98670}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2471B7CA-9E9E-406D-9A45-527DE0AC0131}
+	EndGlobalSection
+EndGlobal
