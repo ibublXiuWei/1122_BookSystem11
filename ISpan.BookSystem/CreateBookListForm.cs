@@ -91,7 +91,7 @@ namespace ISpan.BookSystem
 			new SqlDbHelper("default").ExecuteNonQuery(sql, parameters);
 			MessageBox.Show("分類已新增");
 
-			this.DialogResult = DialogResult.OK; //傳回Ok
+			//this.DialogResult = DialogResult.OK; //傳回Ok
 			InitFormCategory();
 		}
 
@@ -109,8 +109,8 @@ namespace ISpan.BookSystem
 			bool isValid = ValidationHelper.Validate(author, map1, errorProvider1);
 			if (!isValid) return;
 
-			this.DialogResult = DialogResult.OK; //傳回Ok
-			InitFormAuthor();
+			//this.DialogResult = DialogResult.OK; //傳回Ok
+			
 			string authorName = AuthortextBox.Text;
 			string sql = @"INSERT INTO BookAuthor(AuthorName)
 							VALUES (@AuthorName)";
@@ -119,8 +119,8 @@ namespace ISpan.BookSystem
 													.Buid();
 			new SqlDbHelper("default").ExecuteNonQuery(sql, parameters);
 			MessageBox.Show("作者已新增");
+			InitFormAuthor();
 
-			
 		}
 		
 		private void Addbookbutton_Click(object sender, EventArgs e)
@@ -237,6 +237,8 @@ join BookAuthor on Book.author_id=BookAuthor.AuthorId
 			if (frm.ShowDialog() == DialogResult.OK)
 			{
 				DisplayBooks(); //重回更新後回到的dataGridView1，展示產品列表
+				InitFormCategory();
+				InitFormAuthor();
 			}
 		}
 	}

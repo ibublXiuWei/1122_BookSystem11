@@ -53,10 +53,9 @@
 			this.CategoryIdcomboBox.DataSource = this.bookCategoriesVMBindingSource;
 			this.CategoryIdcomboBox.DisplayMember = "CategoriesName";
 			this.CategoryIdcomboBox.FormattingEnabled = true;
-			this.CategoryIdcomboBox.Location = new System.Drawing.Point(155, 111);
-			this.CategoryIdcomboBox.Margin = new System.Windows.Forms.Padding(4);
+			this.CategoryIdcomboBox.Location = new System.Drawing.Point(103, 74);
 			this.CategoryIdcomboBox.Name = "CategoryIdcomboBox";
-			this.CategoryIdcomboBox.Size = new System.Drawing.Size(220, 26);
+			this.CategoryIdcomboBox.Size = new System.Drawing.Size(148, 20);
 			this.CategoryIdcomboBox.TabIndex = 0;
 			this.CategoryIdcomboBox.ValueMember = "Id";
 			// 
@@ -66,10 +65,9 @@
 			// 
 			// Searchbutton
 			// 
-			this.Searchbutton.Location = new System.Drawing.Point(399, 111);
-			this.Searchbutton.Margin = new System.Windows.Forms.Padding(4);
+			this.Searchbutton.Location = new System.Drawing.Point(266, 74);
 			this.Searchbutton.Name = "Searchbutton";
-			this.Searchbutton.Size = new System.Drawing.Size(112, 34);
+			this.Searchbutton.Size = new System.Drawing.Size(75, 23);
 			this.Searchbutton.TabIndex = 2;
 			this.Searchbutton.Text = "Search";
 			this.Searchbutton.UseVisualStyleBackColor = true;
@@ -93,13 +91,12 @@
             this.categoriesNameDataGridViewTextBoxColumn,
             this.callnumberDataGridViewTextBoxColumn});
 			this.dataGridView1.DataSource = this.bookIndexVMBindingSource;
-			this.dataGridView1.Location = new System.Drawing.Point(57, 291);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView1.Location = new System.Drawing.Point(38, 194);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.RowHeadersWidth = 62;
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(1155, 343);
+			this.dataGridView1.Size = new System.Drawing.Size(770, 229);
 			this.dataGridView1.TabIndex = 2;
 			this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
 			// 
@@ -154,50 +151,46 @@
 			// 
 			// AddBookButton
 			// 
-			this.AddBookButton.Location = new System.Drawing.Point(590, 111);
-			this.AddBookButton.Margin = new System.Windows.Forms.Padding(4);
+			this.AddBookButton.Location = new System.Drawing.Point(393, 74);
 			this.AddBookButton.Name = "AddBookButton";
-			this.AddBookButton.Size = new System.Drawing.Size(99, 34);
+			this.AddBookButton.Size = new System.Drawing.Size(66, 23);
 			this.AddBookButton.TabIndex = 3;
-			this.AddBookButton.Text = "Add Book";
+			this.AddBookButton.Text = "Add";
 			this.AddBookButton.UseVisualStyleBackColor = true;
 			this.AddBookButton.Click += new System.EventHandler(this.AddBookButton_Click);
 			// 
 			// SearchbooktextBox
 			// 
-			this.SearchbooktextBox.Location = new System.Drawing.Point(155, 192);
-			this.SearchbooktextBox.Margin = new System.Windows.Forms.Padding(4);
+			this.SearchbooktextBox.Location = new System.Drawing.Point(103, 128);
 			this.SearchbooktextBox.Name = "SearchbooktextBox";
-			this.SearchbooktextBox.Size = new System.Drawing.Size(220, 29);
+			this.SearchbooktextBox.Size = new System.Drawing.Size(148, 22);
 			this.SearchbooktextBox.TabIndex = 1;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(75, 115);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Location = new System.Drawing.Point(50, 77);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(62, 18);
+			this.label1.Size = new System.Drawing.Size(41, 12);
 			this.label1.TabIndex = 4;
 			this.label1.Text = "分類：";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(75, 197);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label2.Location = new System.Drawing.Point(50, 131);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(62, 18);
+			this.label2.Size = new System.Drawing.Size(41, 12);
 			this.label2.TabIndex = 4;
 			this.label2.Text = "書名：";
 			// 
 			// BookListForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::ISpan.BookSystem.Properties.Resources.booklistform;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1301, 694);
+			this.ClientSize = new System.Drawing.Size(867, 463);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.SearchbooktextBox);
@@ -207,7 +200,6 @@
 			this.Controls.Add(this.CategoryIdcomboBox);
 			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "BookListForm";

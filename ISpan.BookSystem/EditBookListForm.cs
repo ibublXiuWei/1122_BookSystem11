@@ -21,16 +21,17 @@ namespace ISpan.BookSystem
 	{
 		private int bookid;
 		private BookIndexVM[] booklists = null;
-		
 		public EditBookListForm(int id)
 		{
 			InitializeComponent();
 			this.bookid = id;
+			//var frm = new EditBookListForm(id);
 			
 			InitFormCategory();
 			InitFormAuthor();
 			DisplayBooks();
-			
+
+			//frm.DialogResult = DialogResult.OK;
 		}
 		
 		private void EditBookListForm_Load(object sender, EventArgs e)
@@ -220,9 +221,10 @@ join BookAuthor on Book.author_id=BookAuthor.AuthorId
 													.Buid();
 			new SqlDbHelper("default").ExecuteNonQuery(sql, parameters);
 			MessageBox.Show("分類已修改");
+			InitFormCategory();
 
 			this.DialogResult = DialogResult.OK; //傳回Ok
-			//InitFormCategory();
+			
 		}
 
 		private void Updateauthorbutton_Click(object sender, EventArgs e)
@@ -244,9 +246,10 @@ set AuthorName=@AuthorName
 													.Buid();
 			new SqlDbHelper("default").ExecuteNonQuery(sql, parameters);
 			MessageBox.Show("作者已修改");
+			InitFormAuthor();
 
 			this.DialogResult = DialogResult.OK; //傳回Ok
-			InitFormAuthor();
+			
 		}
 
 		private void UpdateBookbutton_Click(object sender, EventArgs e)
@@ -280,7 +283,7 @@ set BookName=@BookName,Categories_id=@Categories_id ,Author_Id=@Author_Id
 
 			MessageBox.Show("書籍已修改");
 
-			this.DialogResult = DialogResult.OK;
+			//this.DialogResult = DialogResult.OK;
 
 			//DataRow row = data.Rows[0];
 			//((BookCategoriesVM)this.CategoryIdcomboBox.SelectedItem).Id = row.Field<int>("Categories_id");
@@ -346,7 +349,7 @@ set BookName=@BookName,Categories_id=@Categories_id ,Author_Id=@Author_Id
 
 		private void deletecategorybutton_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("您真的要刪除書籍嗎？", "刪除紀錄",
+			if (MessageBox.Show("您真的要刪除分類嗎？", "刪除紀錄",
 				MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
 			{
 				return; //若沒有回傳Yes,就回到原本的Update頁
@@ -360,14 +363,14 @@ set BookName=@BookName,Categories_id=@Categories_id ,Author_Id=@Author_Id
 													.Buid();
 
 			new SqlDbHelper("default").ExecuteNonQuery(sql, parameters);
-			
 
+			InitFormCategory();
 			this.DialogResult = DialogResult.OK;
 		}
 
 		private void deleteauthorbutton_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("您真的要刪除書籍嗎？", "刪除紀錄",
+			if (MessageBox.Show("您真的要刪除作者嗎？", "刪除紀錄",
 				MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
 			{
 				return; //若沒有回傳Yes,就回到原本的Update頁
@@ -381,7 +384,7 @@ set BookName=@BookName,Categories_id=@Categories_id ,Author_Id=@Author_Id
 
 			new SqlDbHelper("default").ExecuteNonQuery(sql, parameters);
 			//MessageBox.Show("紀錄已新增");
-
+			InitFormAuthor();
 			this.DialogResult = DialogResult.OK;
 		}
 	}

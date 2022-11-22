@@ -77,9 +77,6 @@ join BookAuthor on Book.author_id=BookAuthor.AuthorId
 			//	sql += $" WHERE  BookName like '{searchbook}'";//記得保留空格
 			//}
 			
-
-
-
 			var dbhelper = new SqlDbHelper("default");
 			booklists = dbhelper.Select(sql, parameters)
 						.AsEnumerable()
@@ -139,7 +136,8 @@ join BookAuthor on Book.author_id=BookAuthor.AuthorId
 
 			if (result == DialogResult.OK)
 			{
-				DisplayBooks(); //重回更新後回到的dataGridView1，展示產品列表
+				DisplayBooks();
+				InitForm();//重回更新後回到的dataGridView1，展示產品列表
 			}
 		}
 	}
